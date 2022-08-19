@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'FonteFortnite';
+    src: url("../fonte/Burbank\ Big\ Condensed\ Black.ttf");
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'FonteFortnite', sans-serif;
+    display: block;
+    flex-direction: column;
+}
+
+header {
+    font-size: 25pt;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 35px;
+    margin-top: 30px;
+    color: aquamarine;
+}
+
+section {
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 55px;
+    margin-right: 55px;
+    width: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+    position: relative;
+}
+
+.icone:hover {
+    transform: scale(1.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+li p {
+    color: aquamarine;
+    background-color: rgb(95, 94, 94);
+    text-align: center;
+    position: relative;
+    padding: 5px 20px;
+    border-radius: 15px;
+    margin: auto;
+    width: min-content;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.475);
+    top: -50px;
+    opacity: 0;
+}
+
+li:hover p {
+    opacity: 1;
+    transform: translateY(45px);
+    transition: all .4s;
+}
+
+p:hover {
+    cursor: default;
+}
+
+.nome:hover {
+    opacity: 0;
+    transition: all .1s;
+}
+
+#mensagem {
+    font-size: 15pt;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.imagem-Personagem {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgba(113, 113, 113, 0.253);
+    border-radius: 35px;
+    height: 250px;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#listaPersonagens {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+}
+
+#tela-1:hover {
+    background-image: url(../imagens/adira-tela.png); 
+    background-position: 50% 50%;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    transition: ease 5s;
+}
+
+#tela-2:hover {
+    background-image: url(../imagens/atemporal-tela.png); 
+    background-position: 50% 50%;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    transition: ease 5s;
+}
+
+#tela-3:hover {
+    background-image: url(../imagens/fedra-tela.png); 
+    background-position: 50% 50%;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    transition: ease 5s;
+}
+
+#tela-4:hover {
+    background-image: url(../imagens/imaginaria-tela.png); 
+    background-position: 50% 50%;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    transition: ease 5s;
+}
+
+#tela-5:hover {
+    background-image: url(../imagens/malik-tela.png); 
+    background-position: 50% 50%;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    transition: ease 5s;
+}
+
+#tela-6:hover {
+    background-image: url(../imagens/midas-tela.png); 
+    background-position: 50% 50%;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    transition: ease 5s;
+}
+
+#tela-7:hover {
+    background-image: url(../imagens/ordem-tela.png); 
+    background-position: 50% 50%;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    transition: ease 5s;
+}
+
+#tela-8:hover {
+    background-image: url(../imagens/origem-tela.png); 
+    background-position: 50% 50%;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    transition: ease 5s;
+}
+
+#tela-9:hover {
+    background-image: url(../imagens/raz-tela.png); 
+    background-position: 50% 50%;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    transition: ease 5s;
+}
+
+footer {
+    font-size: 20pt;
+    text-align: center;
+    font-style: italic;
+    color: aquamarine;
+    position: relative;
+    width: 100%;
+    bottom: 0px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+a {
+    font-style: normal;
+    font-size: 20px;
+    padding-top: 5px;
+    font-style: none;
+    text-decoration: none;
+    color: aquamarine;
+}
+
+a:hover {
+    cursor: pointer;
+    color: rgb(2, 2, 132);
+}
