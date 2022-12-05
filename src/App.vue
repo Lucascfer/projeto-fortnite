@@ -1,4 +1,5 @@
 <script setup>
+import Banners from './components/banners.vue';
 import cardsVue from './components/cards.vue';
 </script>
 
@@ -9,6 +10,7 @@ import cardsVue from './components/cards.vue';
   <div id="conteudo">
     <section>
       <h2>Selecione um personagem</h2>
+      <Banners />
       <cardsVue />
     </section>
   </div>
@@ -40,6 +42,10 @@ import cardsVue from './components/cards.vue';
 header h1 {
   padding: 2rem 0 0 0;
   font-size: 4rem;
+}
+
+p, h1, h2:hover {
+  cursor: default
 }
 
 section {
