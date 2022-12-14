@@ -1,6 +1,14 @@
-<script setup>
+<script>
 import Banners from './components/banners.vue';
 import cardsVue from './components/cards.vue';
+
+export default {
+  components: {
+    Banners,
+    cardsVue
+  },
+}
+
 </script>
 
 <template>
@@ -44,7 +52,9 @@ header h1 {
   font-size: 4rem;
 }
 
-p, h1, h2:hover {
+p,
+h1,
+h2:hover {
   cursor: default
 }
 
