@@ -3,9 +3,21 @@ import Banners from './components/banners.vue';
 import cardsVue from './components/cards.vue';
 
 export default {
+  data() {
+    return {
+      heroData: []
+    }
+  },
+
   components: {
     Banners,
     cardsVue
+  },
+
+  methods: {
+    onOpen(heroInfo) {
+      this.heroData = heroInfo
+    }
   },
 }
 
@@ -18,8 +30,8 @@ export default {
   <div id="conteudo">
     <section>
       <h2>Selecione um personagem</h2>
-      <Banners />
-      <cardsVue />
+      <Banners :heroData="heroData"/>
+      <cardsVue @open="onOpen" />
     </section>
   </div>
   <footer>

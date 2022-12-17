@@ -1,103 +1,42 @@
 <script>
 export default {
-    setup() {
-        const characters = [
-            {
-                id: 1,
-                name: "Adira",
-                icon: "/imagens/adira-icon.png",
-                background: "/imagens/adira-tela.png",
-                text: "lorem"
-            },
-            {
-                id: 2,
-                name: "Atemporal",
-                icon: "/imagens/atemporal-icon.png",
-                background: "/imagens/atemporal-tela.png",
-                text: "lorem"
-            },
-            {
-                id: 3,
-                name: "Fedra",
-                icon: "/imagens/fedra-icon.png",
-                background: "/imagens/fedra-tela.png",
-                text: "lorem"
-            },
-            {
-                id: 4,
-                name: "Imaginária",
-                icon: "/imagens/imaginaria-icon.png",
-                background: "/imagens/imaginaria-tela.png",
-                text: "lorem"
-            },
-            {
-                id: 5,
-                name: "Malik",
-                icon: "/imagens/malik-icon.png",
-                background: "/imagens/malik-tela.png",
-                text: "lorem"
-            },
-            {
-                id: 6,
-                name: "Midas",
-                icon: "/imagens/midas-icon.png",
-                background: "/imagens/midas-tela.png",
-                text: "lorem"
-            },
-            {
-                id: 7,
-                name: "Ordem",
-                icon: "/imagens/ordem-icon.png",
-                background: "/imagens/ordem-tela.png",
-                text: "lorem"
-            },
-            {
-                id: 8,
-                name: "Origem",
-                icon: "/imagens/origem-icon.png",
-                background: "/imagens/origem-tela.png",
-                text: "lorem"
-            },
-            {
-                id: 9,
-                name: "Raz",
-                icon: "/imagens/raz-icon.png",
-                background: "/imagens/raz-tela.png",
-                text: "lorem"
-            }
+    name: "cards",
 
-        ];
-
+    data() {
         return {
-            characters,
+            hero: { },
+            heroLi: null
+        };
+    },
 
+    methods: {
+        switchTab(i) {
+            i.classList.toggle('hidden')
+        },
+        changeData() {
+            switchTab(this.heroData)
         }
     },
-    
-    // name: "cards",
-    // data() {
-    //     return {
-    //         characters: [],
-    //     };
-    // },
-    // methods: {
-    //     async getData() {
-    //         const req = await fetch("cards.json");
-    //         const data = await req.json()
-    //         this.characters = data.Character
-    //     },
-    // },
-    // mounted() {
-    //     this.getData();
-    // },
+
+    props: {
+        heroData: Object
+    },
+
+    updated() {
+        this.hero = this.heroData
+        const heroListItem = this.$el.querySelectorAll('.heroList')
+        this.heroLi = heroListItem[0]
+        this.switchTab(this.heroLi)
+    },
+
 }
 </script>
 
 <template>
     <div id="bannerList">
         <ul>
-            <li v-for="hero in characters" :key="hero.id" class="hidden heroList" :id="hero.id">
-                <span class="iconX">X</span>
+            <li :key="hero.id" class="heroList hidden" :id="hero.id">
+                <span class="iconX" @click="switchTab($event.path[1])">X</span>
                 <div class="content">
                     <img :src=hero.icon :alt=hero.name class="icon">
                     <h2> {{ hero.name }} </h2>
@@ -145,12 +84,13 @@ span:hover {
     justify-content: center;
 }
 
-.content, .background, .iconX {
+.content,
+.background,
+.iconX {
     display: flex;
     position: absolute;
     top: 6rem;
     left: 23rem;
-    
 }
 
 #bannerList {
@@ -193,7 +133,7 @@ h2 {
 .background {
     z-index: 7;
     border-radius: 15px;
-    box-shadow: 0px 0px 600px 600px rgba(0, 0, 0, 0.632);
+    /* box-shadow: 0px 0px 600px 600px rgba(0, 0, 0, 0.632); */
 }
 
 .text {
