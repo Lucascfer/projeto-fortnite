@@ -1,29 +1,32 @@
 <script>
-import Banners from './components/banners.vue';
-import cardsVue from './components/cards.vue';
+import Banners from "./components/banners.vue";
+import cardsVue from "./components/cards.vue";
 
 export default {
   data() {
     return {
-      heroData: []
-    }
+      heroData: null,
+      bannerOpen: false
+    };
   },
 
   components: {
     Banners,
-    cardsVue
+    cardsVue,
   },
 
   methods: {
     onOpen(heroInfo) {
+      this.bannerOpen = true
       this.heroData = heroInfo
     },
-    onClose() {
-      this.heroData = []
-    }
-  },
-}
 
+    onClose() {
+      this.bannerOpen = false
+      this.heroData = []
+    },
+  },
+};
 </script>
 
 <template>
@@ -33,14 +36,20 @@ export default {
   <div id="conteudo">
     <section>
       <h2>Selecione um personagem</h2>
-      <Banners :heroData="heroData" @close="onClose" />
+      <Banners v-show="bannerOpen" :heroData="heroData" @close="onClose" />
       <cardsVue @open="onOpen" />
     </section>
   </div>
   <footer>
     <p>Criado por Lucascfer</p>
-    <p class="links"><a href="https://github.com/Lucascfer" target="_blank">Github</a> | <a
-        href="https://www.linkedin.com/in/lucas-carvalho-fernandes-799b9617a/" target="_blank">Linkedin</a></p>
+    <p class="links">
+      <a href="https://github.com/Lucascfer" target="_blank">Github</a> |
+      <a
+        href="https://www.linkedin.com/in/lucas-carvalho-fernandes-799b9617a/"
+        target="_blank"
+        >Linkedin</a
+      >
+    </p>
   </footer>
 </template>
 
@@ -49,7 +58,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'FonteFortnite', sans-serif;
+  font-family: "FonteFortnite", sans-serif;
   list-style: none;
   text-decoration: none;
   justify-content: center;
@@ -58,7 +67,7 @@ export default {
 }
 
 @font-face {
-  font-family: 'FonteFortnite';
+  font-family: "FonteFortnite";
   src: url("../public/fonte/Burbank\ Big\ Condensed\ Black.ttf");
 }
 
@@ -70,7 +79,7 @@ header h1 {
 p,
 h1,
 h2:hover {
-  cursor: default
+  cursor: default;
 }
 
 section {
