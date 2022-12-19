@@ -17,6 +17,9 @@ export default {
   methods: {
     onOpen(heroInfo) {
       this.heroData = heroInfo
+    },
+    onClose() {
+      this.heroData = []
     }
   },
 }
@@ -30,7 +33,7 @@ export default {
   <div id="conteudo">
     <section>
       <h2>Selecione um personagem</h2>
-      <Banners :heroData="heroData"/>
+      <Banners :heroData="heroData" @close="onClose" />
       <cardsVue @open="onOpen" />
     </section>
   </div>

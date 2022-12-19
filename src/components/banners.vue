@@ -1,10 +1,12 @@
 <script>
+import { EMPTY_OBJ } from '@vue/shared';
+
 export default {
     name: "cards",
 
     data() {
         return {
-            hero: { },
+            hero: {},
             heroLi: null
         };
     },
@@ -12,9 +14,6 @@ export default {
     methods: {
         switchTab(i) {
             i.classList.toggle('hidden')
-        },
-        changeData() {
-            switchTab(this.heroData)
         }
     },
 
@@ -36,7 +35,7 @@ export default {
     <div id="bannerList">
         <ul>
             <li :key="hero.id" class="heroList hidden" :id="hero.id">
-                <span class="iconX" @click="switchTab($event.path[1])">X</span>
+                <span class="iconX" @click="switchTab($event.composedPath()[1]); $emit('close')">X</span>
                 <div class="content">
                     <img :src=hero.icon :alt=hero.name class="icon">
                     <h2> {{ hero.name }} </h2>
@@ -51,6 +50,7 @@ export default {
 <style scoped>
 .hidden {
     display: none;
+    opacity: 0;
 }
 
 .heroList {
