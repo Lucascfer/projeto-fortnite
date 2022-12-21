@@ -14,7 +14,6 @@ export default {
   },
 
   updated() {
-    console.log(this.heroData);
     this.hero = this.heroData;
   },
 };
@@ -129,6 +128,8 @@ h2 {
   display: block;
   z-index: 8;
   width: 28rem;
+  max-height: 200px;
+  overflow-y: auto;
   font-size: 1.5rem;
   margin: auto;
   background-color: rgba(235, 232, 232, 0.737);

@@ -44,11 +44,7 @@ export default {
     <p>Criado por Lucascfer</p>
     <p class="links">
       <a href="https://github.com/Lucascfer" target="_blank">Github</a> |
-      <a
-        href="https://www.linkedin.com/in/lucas-carvalho-fernandes-799b9617a/"
-        target="_blank"
-        >Linkedin</a
-      >
+      <a href="https://www.linkedin.com/in/lucas-carvalho-fernandes-799b9617a/" target="_blank">Linkedin</a>
     </p>
   </footer>
 </template>
@@ -64,6 +60,20 @@ export default {
   justify-content: center;
   text-align: center;
   letter-spacing: 1px;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #070d1200;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: aquamarine;
+  border-radius: 25px;
+  border: 2px solid rgb(58, 58, 58);
 }
 
 @font-face {
