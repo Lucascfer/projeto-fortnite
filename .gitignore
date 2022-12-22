@@ -13,6 +13,13 @@ node_modules
 dist-ssr
 coverage
 *.local
+.vscode
+public
+src
+index.html
+package-lock.json
+package.json
+
 
 /cypress/videos/
 /cypress/screenshots/
