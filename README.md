@@ -1,29 +1,6 @@
 # Projeto-fortnite
 
-This template should help get you started developing with Vue 3 in Vite.
+Nesse projeto usei um JSON para buscar as informações necessárias parra a renderização na tela e utilizei muito do emit e props para trocar informação entre os componentes
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+![image](https://user-images.githubusercontent.com/110013093/209144594-5e928844-b34d-4362-b7dd-9bb811aab314.png)
+![image](https://user-images.githubusercontent.com/110013093/209144615-78228476-de1b-4c0f-8dff-a82e1a4fd96d.png)
