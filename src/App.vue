@@ -17,12 +17,12 @@ export default {
 
   methods: {
     onOpen(heroInfo) {
-      this.bannerOpen = true
+      this.bannerOpen = !this.bannerOpen
       this.heroData = heroInfo
     },
 
     onClose() {
-      this.bannerOpen = false
+      this.bannerOpen = !this.bannerOpen
       this.heroData = []
     },
   },
@@ -37,10 +37,10 @@ export default {
     <section>
       <h2>Selecione um personagem</h2>
       <Banners v-show="bannerOpen" :heroData="heroData" @close="onClose" />
-      <cardsVue @open="onOpen" />
+      <cardsVue v-show="!bannerOpen" @open="onOpen" />
     </section>
   </div>
-  <footer>
+  <footer v-show="!bannerOpen">
     <p>Criado por Lucascfer</p>
     <p class="links">
       <a href="https://github.com/Lucascfer" target="_blank">Github</a> |
@@ -73,7 +73,7 @@ export default {
 *::-webkit-scrollbar-thumb {
   background-color: aquamarine;
   border-radius: 25px;
-  border: 2px solid rgb(58, 58, 58);
+  border: 2px solid #252525b3;
 }
 
 @font-face {
