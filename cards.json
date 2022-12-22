@@ -3,22 +3,22 @@
         {
             "id": 1,
             "name": "Adira",
-            "icon": "imagens/adira-icon.png",
-            "background": "imagens/adira-tela.png",
+            "icon": "/imagens/adira-icon.png",
+            "background": "/imagens/adira-tela.png",
             "text": "Adira é um Traje Épico em Fortnite : Battle Royale , que pode ser obtido comprando todos os cosméticos da página 3 e gastando Estrela de Batalha (Capítulo 2). Ela faz parte do The Dragon Rider Set."
         },
         {
             "id": 2,
             "name": "Atemporal",
-            "icon": "imagens/atemporal-icon.png",
-            "background": "imagens/atemporal-tela.png",
+            "icon": "/imagens/atemporal-icon.png",
+            "background": "/imagens/atemporal-tela.png",
             "text": "Atemporal skin é um Fortnite Traje Lendário. Faz Parte do conjunto Atemporal.Este personagen foi introduzido em Fortnite Battle Royale em 11 de julho de 2018 (Capítulo 1 Temporada 5 version 4.5-CU). É um roupa do Passe de Batalha Fortnite do Capítulo 1 Temporada 5 que poderia ser obtido como roupa de Nível 1. Os estilos de Atemporal poderiam ser desbloqueados completando os desafios relacionados a este traje."
         },
         {
             "id": 3,
             "name": "Fedra",
-            "icon": "imagens/fedra-icon.png",
-            "background": "imagens/fedra-tela.png",
+            "icon": "/imagens/fedra-icon.png",
+            "background": "/imagens/fedra-tela.png",
             "text": "Fedra 'ofusca' a luz não apenas com seu chapéu, mas também com o octópode Acessório para as Costas Cefas, que faz parte do Pacote do Clube. Os demais itens do Pacote do Clube de Julho são a Picareta Sombrinha Estígio (como se o chapéu da Fedra não bastasse), a Asa-delta Sombra Gótica, que voa em uma brisa aterrorizante do além, e a Tela de Carregamento Reflexão Tingida"
         },
         {
